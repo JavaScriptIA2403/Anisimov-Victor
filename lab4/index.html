@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="main">
+        <div id="row1">
+            <div id="row1_1">
+                <h2>Добавьте транзакцию...</h2>
+                <form id="add">
+                    <p>
+                        <label for="amount">Сумма перевода</label>
+                        <input type="text" name="sum"pattern="^\d+(\.\d{1,2})?$" id="amount" size="3" min="1" placeholder="0.0" required>$
+                    </p>
+                    <p>
+                        <label for="type">Тип транзакции</label>
+                        <select id = "type" name="type" required>
+                            <option value ="" disabled selected id="">Выберите тип...</option>
+                            <option value="credit">Credit</option>
+                            <option value="debit">Debit</option>
+                        </select>
+                    </p>
+                    <p>
+                        Информация о переводе:<br>
+                        <textarea name = "info" placeholder="Краткая информация о переводе..." rows="3" cols="25" required></textarea>
+                    </p>
+                    <input type="submit" value="Добавить" style="margin-bottom: 10px;"><br>
+                </form>
+            </div>
+            <div id="row1_2">
+                <table>
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width: 15%;">
+                        <col style="width: 10%;">
+                        <col style="width: 45%;">
+                        <col style="width: 20%;">
+                      </colgroup>
+                    <thead>
+                    <tr>
+                        <th>
+                            Дата и время
+                        </th>
+                        <th>
+                            Категория транзакции
+                        </th>
+                        <th>
+                            Сумма
+                        </th>
+                        <th>
+                            Краткое описание транзакции
+                        </th>
+                        <th>
+                            Действие
+                        </th>
+                    </tr>
+                    </thead>
+                <tbody>
+                    
+                </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="row2">
+            <div id="row2_1">
+            </div>
+            <div id="total_sum">
+                TOTAL SUM<div></div>
+            </div>
+            <div id="row2_2">
+                <button id="most_trns_type">Тип большего кол-во трнз</button>
+                <button id="total_debi_amount">Наибольшая дебитовая трнз</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="src/index.js"></script>
+    <script type="module" src="src/ui.js"></script>
+
+</body>
+</html>
